@@ -118,5 +118,5 @@ END PROCESS;
  min_sel <= '0' WHEN STATE = S6 ELSE
            '1' WHEN STATE = S14 ELSE
            '1'; 
- WE <='1' WHEN STATE = S19 ELSE '0';
+ WE <='1' WHEN STATE = S20 ELSE '0';
 END RTL;

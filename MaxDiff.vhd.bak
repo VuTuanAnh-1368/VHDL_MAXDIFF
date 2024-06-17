@@ -12,9 +12,8 @@ ENTITY MAXDIFF IS
 	WE: IN STD_LOGIC;
         Start_i : IN STD_LOGIC;
         data_in, ADDR_in,L : IN STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
-      --  maxDiff : OUT STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
-        Done : OUT STD_LOGIC;
-	maxDiff: OUT STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0) 
+       maxDiff : OUT STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
+        Done : OUT STD_LOGIC
   ); 
 
 END MAXDIFF;
@@ -22,7 +21,7 @@ END MAXDIFF;
 ARCHITECTURE RTL OF MAXDIFF IS
  SIGNAL rt_i, check_i, min_sl, max_sl ,  En_max, En_min, En_cnt, En_dt,  max_sel, min_sel, En_o, LD_i, RE: STD_LOGIC;
  SIGNAL i: STD_LOGIC_VECTOR(DATA_WIDTH -1 downto 0);
- SIGNAL  result:  STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
+SIGNAL   RESULT:  STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
  BEGIN
 CTRL_UNIT: CONTROLLER
  GENERIC MAP( DATA_WIDTH => DATA_WIDTH)
@@ -33,7 +32,9 @@ CTRL_UNIT: CONTROLLER
         En_max, En_min, En_cnt, En_dt,  max_sel, min_sel, En_o, LD_i,
         START_i,
         RE,
-        Done
+        Done ,
+	MaxDIFF ,
+        RESULT 
   );
 
 DATPATH : DATAPATH

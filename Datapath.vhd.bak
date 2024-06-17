@@ -31,7 +31,7 @@ SIGNAL max_reg, min_reg: STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
  BEGIN
  -- CMP_check_i
 	check_i <= '0' WHEN i > 0 ELSE '1';
- -- CMP_rt_i not equal;
+ -- CMP_rt_i;
 	rt_i <= '0' WHEN i/=L ELSE '1';
  -- Mux_for_ADDR
 	ADDR_i <= i WHEN START_i = '1' ELSE ADDR_in; 

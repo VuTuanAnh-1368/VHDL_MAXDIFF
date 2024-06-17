@@ -78,16 +78,16 @@ BEGIN
         WAIT FOR 20 ns;
         rst <= '0';
 
-   
+        -- Write data to memory
         FOR idx IN test_data'RANGE LOOP
             data_in <= test_data(idx);
             addr <= STD_LOGIC_VECTOR(to_unsigned(idx, 8));
-            we <= '1'; 
+            we <= '1'; -- Enable write operation
             WAIT FOR clk_period; -- Wait for one clock cycle
-           -- we <= '0'; -- Disable write
-         --   WAIT FOR clk_period;
+            we <= '0'; -- Disable write
+            WAIT FOR clk_period;
         END LOOP;
-           we <= '0'; 
+
         -- Read data from memory
         FOR idx IN test_data'RANGE LOOP
             addr <= STD_LOGIC_VECTOR(to_unsigned(idx, 8));

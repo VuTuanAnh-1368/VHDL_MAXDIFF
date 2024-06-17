@@ -20,7 +20,7 @@ ARCHITECTURE Behavioral OF Counter IS
     SIGNAL pre_count: std_logic_vector(DATA_WIDTH-1 downto 0);  
     SIGNAL counter_reg : STD_LOGIC_VECTOR(DATA_WIDTH-1 DOWNTO 0) := (others => '0');
 BEGIN
-    counter_reg(0) <= '0';
+    counter_reg(0) <= '0'; -- i == 1
     PROCESS(CLK, En_cnt, Reset)
     BEGIN
         IF Reset = '1' THEN

@@ -6,6 +6,8 @@ ENTITY Counter_tb IS
 END Counter_tb;
 
 ARCHITECTURE behavior OF Counter_tb IS
+
+    -- Component Declaration for the Unit Under Test (UUT)
     COMPONENT Counter
     GENERIC (
         DATA_WIDTH : INTEGER := 8

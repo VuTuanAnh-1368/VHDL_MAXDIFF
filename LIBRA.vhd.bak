@@ -26,9 +26,9 @@ COMPONENT CONTROLLER IS
         En_max, En_min, En_cnt, En_dt,  max_sel, min_sel, En_o, LD_i : OUT STD_LOGIC;
         START_i : IN STD_LOGIC;
         RE, WE : OUT STD_LOGIC;
-        Done   : OUT STD_LOGIC
-     --   MaxDIFF : IN STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
-      --  RESULT : OUT STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0)
+        Done   : OUT STD_LOGIC;
+        MaxDIFF : IN STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0);
+        RESULT : OUT STD_LOGIC_VECTOR (DATA_WIDTH -1 downto 0)
   ); 
 
 END COMPONENT;
